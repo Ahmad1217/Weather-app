@@ -1,0 +1,23 @@
+﻿@page "/counter"
+
+<h1>Counter Tracker</h1>
+
+<p role="status">You have clicked @currentCount times.</p>
+
+<button class="btn btn-success" @onclick="IncrementCount">Increase Counter</button>
+
+<p>Challenge yourself to reach 100 clicks!</p>
+
+@code {
+    private int currentCount = 0;
+
+
+
+    private void IncrementCount()
+
+    {
+
+        currentCount++;
+
+    }
+}

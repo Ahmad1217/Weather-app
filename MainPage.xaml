@@ -1,0 +1,66 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeManagementApp.MainPage">
+
+    <Grid>
+        <!-- Background image covering the entire page -->
+        <Image Source="weatherbg.jpg" 
+               Aspect="AspectFill"
+               IsVisible="True" />
+
+        <!-- Main content of the page -->
+        <VerticalStackLayout Padding="20">
+
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*, *" ColumnSpacing="10" RowSpacing="10">
+
+                <Frame Grid.Row="0" Grid.ColumnSpan="2" Padding="10" CornerRadius="10" BackgroundColor="#1E1E1E">
+                    <VerticalStackLayout>
+                        <Label Text="Temperature:" FontSize="24" TextColor="White" />
+                        <Label x:Name="TemperatureLabel" FontSize="24" TextColor="White" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="0" Padding="10" CornerRadius="10" BackgroundColor="#1E1E1E">
+                    <VerticalStackLayout>
+                        <Label Text="Wind Speed:" FontSize="24" TextColor="White" />
+                        <Label x:Name="WindspeedLabel" FontSize="24" TextColor="White" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="1" Padding="10" CornerRadius="10" BackgroundColor="#1E1E1E">
+                    <VerticalStackLayout>
+                        <Label Text="Min Temperature:" FontSize="24" TextColor="White" />
+                        <Label x:Name="MinTemperatureLabel" FontSize="24" TextColor="White" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Grid.Row="2" Grid.Column="0" Padding="10" CornerRadius="10" BackgroundColor="#1E1E1E">
+                    <VerticalStackLayout>
+                        <Label Text="Max Temperature:" FontSize="24" TextColor="White" />
+                        <Label x:Name="MaxTemperatureLabel" FontSize="24" TextColor="White" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Grid.Row="2" Grid.Column="1" Padding="10" CornerRadius="10" BackgroundColor="#1E1E1E">
+                    <VerticalStackLayout>
+                        <Label Text="Precipitation Forecast:" FontSize="24" TextColor="White" />
+                        <Label x:Name="PrecipitationLabel" FontSize="24" TextColor="White" />
+                    </VerticalStackLayout>
+                </Frame>
+
+            </Grid>
+
+            <!-- Weather update button -->
+            <Button Text="Update Weather" 
+                    Clicked="OnWeatherUpdateClicked" 
+                    BackgroundColor="#20b098" 
+                    TextColor="White" 
+                    Padding="15" 
+                    CornerRadius="10" 
+                    HorizontalOptions="Center" 
+                    Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
